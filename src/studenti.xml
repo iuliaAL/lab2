@@ -6,12 +6,6 @@
         <mail>riir3478@scs.ubbcluj.ro</mail>
         <profesor>Plesu Andrei</profesor>
     </Student>
-    <Student idStudent="1090">
-        <nume>Maricica Blablabla</nume>
-        <grupa>934</grupa>
-        <mail>mari@yahoo.com</mail>
-        <profesor>Ioan Ratiu</profesor>
-    </Student>
     <Student idStudent="2">
         <nume>Gorea Andra</nume>
         <grupa>921</grupa>
@@ -21,18 +15,6 @@
     <Student idStudent="3">
         <nume>Maricica Blablabla</nume>
         <grupa>911</grupa>
-        <mail>mari@yahoo.com</mail>
-        <profesor>Ioan Ratiu</profesor>
-    </Student>
-    <Student idStudent="30">
-        <nume>Maricica Blablabla</nume>
-        <grupa>911</grupa>
-        <mail>mari@yahoo.com</mail>
-        <profesor>Ioan Ratiu</profesor>
-    </Student>
-    <Student idStudent="20">
-        <nume>Maricica Blablabla</nume>
-        <grupa>112</grupa>
         <mail>mari@yahoo.com</mail>
         <profesor>Ioan Ratiu</profesor>
     </Student>
