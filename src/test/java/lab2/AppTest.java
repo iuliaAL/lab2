@@ -22,36 +22,36 @@ public class AppTest
      */
     @Test
     public void addStudentTest_1() {
-        Student s = new Student("1090", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("20000", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
 
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
 
         srv.add(s);
 
-        Assert.assertTrue("Student was not added!", (srv.find("1090").equals(s)));
+        Assert.assertTrue("Student was not added!", (srv.find("20000").equals(s)));
     }
 
     @Test
     public void addStudentTest_4() {
-        Student s = new Student("20", "Maricica Blablabla", 112, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("30000", "Maricica Blablabla", 112, "mari@yahoo.com", "Ioan Ratiu");
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
 
         srv.add(s);
 
-        Assert.assertTrue("Student was not added!", (srv.find("20").equals(s)));
+        Assert.assertTrue("Student was not added!", (srv.find("30000").equals(s)));
     }
 
     @Test
     public void addStudentTest_5() {
-        Student s = new Student("30", "Maricica Blablabla", 911, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("1000", "Maricica Blablabla", 911, "mari@yahoo.com", "Ioan Ratiu");
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
 
         srv.add(s);
 
-        Assert.assertTrue("Student was not added!", (srv.find("30").equals(s)));
+        Assert.assertTrue("Student was not added!", (srv.find("1000").equals(s)));
     }
 
 
