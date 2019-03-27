@@ -3,9 +3,13 @@ package lab2;
 import static org.junit.Assert.assertTrue;
 
 import lab2.Domain.Student;
+import lab2.Domain.Teme;
 import lab2.Repository.StudentRepo;
+import lab2.Repository.TemeRepo;
 import lab2.Service.ServiceStudent;
+import lab2.Service.ServiceTeme;
 import lab2.Validator.StudentValidator;
+import lab2.Validator.TemeValidator;
 import lab2.Validator.ValidationException;
 import lab2.Validator.Validator;
 import org.junit.Assert;
@@ -199,4 +203,31 @@ public class AppTest
         }
     }
 
+    @Test
+    public void addAssgnTest_1() {
+         Teme t  = new Teme(1, "descriere", 9, 15);
+
+
+        try {
+            TemeRepo rep = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+            ServiceTeme srv = new ServiceTeme(rep);
+            srv.add(t);
+
+        } catch (ValidationException e) {
+            Assert.assertEquals("\nDeadline invalid", e.getMessage());
+        }
+    }
+
+    @Test
+    public void addAssgnTest_2() {
+        Teme t  = new Teme(1, "descriere", 4, 3);
+        try {
+            TemeRepo rep = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+            ServiceTeme srv = new ServiceTeme(rep);
+            srv.add(t);
+
+        } catch (ValidationException e) {
+            Assert.assertEquals("\nDeadline invalid", e.getMessage());
+        }
+    }
 }
