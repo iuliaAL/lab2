@@ -14,7 +14,7 @@ import lab2.Validator.TemeValidator;
 import lab2.Validator.ValidationException;
 import lab2.Validator.Validator;
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 import org.testng.asserts.SoftAssert;
 
 /**

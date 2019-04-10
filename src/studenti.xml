@@ -18,4 +18,10 @@
         <mail>mari@yahoo.com</mail>
         <profesor>Ioan Ratiu</profesor>
     </Student>
+    <Student idStudent="1000">
+        <nume>Maricica Blablabla</nume>
+        <grupa>911</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
 </inbox>
