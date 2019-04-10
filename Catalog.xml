@@ -14,3 +14,19 @@
         <valoare>5.0</valoare>
     </Nota>
 </Note>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Note>
+    <Nota idNota="204561033">
+        <nume>Maricica Blablabla</nume>
+        <nr>1033</nr>
+        <valoare>10.0</valoare>
+    </Nota>
+</Note>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Note>
+    <Nota idNota="204561034">
+        <nume>Maricica Blablabla</nume>
+        <nr>1034</nr>
+        <valoare>10.0</valoare>
+    </Nota>
+</Note>

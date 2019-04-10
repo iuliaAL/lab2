@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <inbox>
+    <Student idStudent="20456">
+        <nume>Maricica Blablabla</nume>
+        <grupa>934</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
     <Student idStudent="1">
         <nume>Roman Ionut</nume>
         <grupa>222</grupa>
@@ -18,9 +24,21 @@
         <mail>mari@yahoo.com</mail>
         <profesor>Ioan Ratiu</profesor>
     </Student>
+    <Student idStudent="20000">
+        <nume>Maricica Blablabla</nume>
+        <grupa>934</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
     <Student idStudent="1000">
         <nume>Maricica Blablabla</nume>
         <grupa>911</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
+    <Student idStudent="20458">
+        <nume>Maricica Blablabla</nume>
+        <grupa>934</grupa>
         <mail>mari@yahoo.com</mail>
         <profesor>Ioan Ratiu</profesor>
     </Student>

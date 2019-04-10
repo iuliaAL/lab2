@@ -5,17 +5,19 @@ import static org.junit.Assert.assertTrue;
 import lab2.Domain.Nota;
 import lab2.Domain.Student;
 import lab2.Domain.Teme;
+import lab2.Repository.NoteRepo;
 import lab2.Repository.StudentRepo;
 import lab2.Repository.TemeRepo;
+import lab2.Service.ServiceNote;
 import lab2.Service.ServiceStudent;
 import lab2.Service.ServiceTeme;
-import lab2.Validator.StudentValidator;
-import lab2.Validator.TemeValidator;
-import lab2.Validator.ValidationException;
-import lab2.Validator.Validator;
+import lab2.Validator.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.testng.asserts.SoftAssert;
+
+
+import java.util.AbstractMap;
+import java.util.Map;
 
 /**
  * Unit test for simple App.
@@ -227,37 +229,66 @@ public class AppTest
         }
     }
 
-   /* @Test
+    @Test
     public void addStudentBBITest()
     {
-        Student s = new Student("20456", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("20457", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
 
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
 
         srv.add(s);
+        //Assert.assertTrue("Student was not added!", (srv.find("20456").equals(s)));
     }
 
     @Test
     public void addAssignBBITest()
     {
-        Teme t = new Teme(1033, "descriere", 9, 10);
+        Teme t = new Teme(1039, "descriere", 9, 10);
 
         TemeRepo rep = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
         ServiceTeme srv = new ServiceTeme(rep);
         srv.add(t);
 
-        Assert.assertEquals("Assignment not added!", srv.find(1033), t);
+        Assert.assertEquals("Assignment not added!", srv.find(1039), t);
     }
 
     @Test
     public void addGreadeBBITest()
     {
-        Student st = srv.find(id);
-        Teme tm = serv.find(nr);
-        Nota nt = new Nota(111, st, tm, nota, data);
-        nota = nt.getValoare();
-        nt = new Nota(nid, st, tm, nota, data);
-    }*/
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+        Student st = srv.find("20457");
+        TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+        ServiceTeme serv = new ServiceTeme(repo);
+        Teme tm = serv.find(1039);
+        Map.Entry<String, Integer> nid = new AbstractMap.SimpleEntry<String, Integer>("20457",1039);
+        Nota nt = new Nota(nid, st, tm, 10, 02);
+        NoteRepo r=new NoteRepo(new NotaValidator());
+        r.save(nt,"feedback");
+    }
+
+    @Test
+    public void bingBangTest()
+    {
+        Student s = new Student("204511", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+
+        srv.add(s);
+
+        Teme t = new Teme(1022, "descriere", 9, 10);
+
+        TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+        ServiceTeme srve = new ServiceTeme(repo);
+        srve.add(t);
+
+        Map.Entry<String, Integer> nid = new AbstractMap.SimpleEntry<String, Integer>("204511",1022);
+        Nota nt = new Nota(nid, s, t, 10, 02);
+        NoteRepo r=new NoteRepo(new NotaValidator());
+        r.save(nt,"feedback");
+
+    }
 
 }
