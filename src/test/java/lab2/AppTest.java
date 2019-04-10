@@ -226,4 +226,33 @@ public class AppTest
         }
     }
 
+    /*@Test
+    public void addStudentBBITest()
+    {
+        Student s = new Student("20456", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+
+        srv.add(s);
+    }
+
+    @Test
+    public void addAssignBBITest()
+    {
+        Teme t = new Teme(1033, "descriere", 9, 10);
+
+        TemeRepo rep = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+        ServiceTeme srv = new ServiceTeme(rep);
+        srv.add(t);
+
+        Assert.assertEquals("Assignment not added!", srv.find(1033), t);
+    }
+
+    @Test
+    public void addGreadeBBITest()
+    {
+
+    }*/
+
 }
