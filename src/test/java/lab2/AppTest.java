@@ -2,6 +2,7 @@ package lab2;
 
 import static org.junit.Assert.assertTrue;
 
+import lab2.Domain.Nota;
 import lab2.Domain.Student;
 import lab2.Domain.Teme;
 import lab2.Repository.StudentRepo;
@@ -13,7 +14,7 @@ import lab2.Validator.TemeValidator;
 import lab2.Validator.ValidationException;
 import lab2.Validator.Validator;
 import org.junit.Assert;
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 /**
@@ -59,7 +60,7 @@ public class AppTest
     }
 
 
-    @Test
+    /*@Test
     public void addStudentTest_6() {
         Student s = new Student("", "Maricica Blablabla", 911, "mari@yahoo.com", "Ioan Ratiu");
 
@@ -75,7 +76,7 @@ public class AppTest
         }
 
         softAssert.assertAll();
-    }
+    }*/
 
     @Test
     public void addStudentTest_7() {
@@ -226,7 +227,7 @@ public class AppTest
         }
     }
 
-    /*@Test
+   /* @Test
     public void addStudentBBITest()
     {
         Student s = new Student("20456", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
@@ -252,7 +253,11 @@ public class AppTest
     @Test
     public void addGreadeBBITest()
     {
-
+        Student st = srv.find(id);
+        Teme tm = serv.find(nr);
+        Nota nt = new Nota(111, st, tm, nota, data);
+        nota = nt.getValoare();
+        nt = new Nota(nid, st, tm, nota, data);
     }*/
 
 }
