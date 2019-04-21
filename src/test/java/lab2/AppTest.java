@@ -291,4 +291,70 @@ public class AppTest
 
     }
 
+    // TOP DOWN - LAB 4 - TAKE HOME
+
+    @Test
+    public void addStudentTopDownTest()
+    {
+        Student s = new Student("2055", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+        srv.add(s);
+
+        Assert.assertTrue("Student was not added!", (srv.find("2055").equals(s)));
+    }
+
+    @Test
+    public void addAssignTopDownTest()
+    {
+        // add student
+        Student s = new Student("2055", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+        srv.add(s);
+
+        Assert.assertTrue("Student was not added!", (srv.find("2055").equals(s)));
+
+        // add assignment
+        Teme t = new Teme(1009, "descriere", 9, 10);
+
+        TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+        ServiceTeme srvc = new ServiceTeme(repo);
+        srvc.add(t);
+
+        Assert.assertEquals("Assignment not added!", srvc.find(1009), t);
+    }
+
+    @Test
+    public void addGradeTopDownTest()
+    {
+        // add student
+        String studentId = "12395";
+        Student s = new Student(studentId, "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+
+        StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
+        ServiceStudent srv = new ServiceStudent(rep);
+        srv.add(s);
+
+        Assert.assertTrue("Student was not added!", (srv.find(studentId).equals(s)));
+
+        // add assignment
+        int temaId = 1294;
+        Teme t = new Teme(temaId, "descriere", 9, 10);
+
+        TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
+        ServiceTeme srvc = new ServiceTeme(repo);
+        srvc.add(t);
+
+        Assert.assertEquals("Assignment not added!", srvc.find(temaId), t);
+
+        // add grade
+        Map.Entry<String, Integer> nid = new AbstractMap.SimpleEntry<String, Integer>(studentId,temaId);
+        Nota nt = new Nota(nid, s, t, 10, 02);
+        NoteRepo r=new NoteRepo(new NotaValidator());
+        r.save(nt,"feedback");
+    }
+
 }

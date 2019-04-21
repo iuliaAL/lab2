@@ -6,6 +6,12 @@
         <mail>mari@yahoo.com</mail>
         <profesor>Ioan Ratiu</profesor>
     </Student>
+    <Student idStudent="204511">
+        <nume>Maricica Blablabla</nume>
+        <grupa>934</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
     <Student idStudent="1">
         <nume>Roman Ionut</nume>
         <grupa>222</grupa>
@@ -37,6 +43,12 @@
         <profesor>Ioan Ratiu</profesor>
     </Student>
     <Student idStudent="20458">
+        <nume>Maricica Blablabla</nume>
+        <grupa>934</grupa>
+        <mail>mari@yahoo.com</mail>
+        <profesor>Ioan Ratiu</profesor>
+    </Student>
+    <Student idStudent="20457">
         <nume>Maricica Blablabla</nume>
         <grupa>934</grupa>
         <mail>mari@yahoo.com</mail>

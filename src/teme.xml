@@ -25,4 +25,14 @@
         <deadline>10</deadline>
         <sapt_primire>9</sapt_primire>
     </Tema>
+    <Tema nr="1022">
+        <descriere>descriere</descriere>
+        <deadline>10</deadline>
+        <sapt_primire>9</sapt_primire>
+    </Tema>
+    <Tema nr="1039">
+        <descriere>descriere</descriere>
+        <deadline>10</deadline>
+        <sapt_primire>9</sapt_primire>
+    </Tema>
 </Teme>
