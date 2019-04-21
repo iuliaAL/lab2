@@ -296,42 +296,42 @@ public class AppTest
     @Test
     public void addStudentTopDownTest()
     {
-        Student s = new Student("2055", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("20448", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
 
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
         srv.add(s);
 
-        Assert.assertTrue("Student was not added!", (srv.find("2055").equals(s)));
+        Assert.assertTrue("Student was not added!", (srv.find("20448").equals(s)));
     }
 
     @Test
     public void addAssignTopDownTest()
     {
         // add student
-        Student s = new Student("2055", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
+        Student s = new Student("20112", "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
 
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
         ServiceStudent srv = new ServiceStudent(rep);
         srv.add(s);
 
-        Assert.assertTrue("Student was not added!", (srv.find("2055").equals(s)));
+        Assert.assertTrue("Student was not added!", (srv.find("20112").equals(s)));
 
         // add assignment
-        Teme t = new Teme(1009, "descriere", 9, 10);
+        Teme t = new Teme(1509, "descriere", 9, 10);
 
         TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
         ServiceTeme srvc = new ServiceTeme(repo);
         srvc.add(t);
 
-        Assert.assertEquals("Assignment not added!", srvc.find(1009), t);
+        Assert.assertEquals("Assignment not added!", srvc.find(1509), t);
     }
 
     @Test
     public void addGradeTopDownTest()
     {
         // add student
-        String studentId = "12395";
+        String studentId = "12390";
         Student s = new Student(studentId, "Maricica Blablabla", 934, "mari@yahoo.com", "Ioan Ratiu");
 
         StudentRepo rep = new StudentRepo((Validator<Student>) new StudentValidator(), "src/studenti.xml");
@@ -341,7 +341,7 @@ public class AppTest
         Assert.assertTrue("Student was not added!", (srv.find(studentId).equals(s)));
 
         // add assignment
-        int temaId = 1294;
+        int temaId = 1290;
         Teme t = new Teme(temaId, "descriere", 9, 10);
 
         TemeRepo repo = new TemeRepo((Validator<Teme>) new TemeValidator(), "src/teme.xml");
